@@ -4,8 +4,7 @@
 #include "main.h"
 
 /*
- * int get_precision(const char *format, int *x, va_list list);:wq
- 
+ * int get_precision(const char *format, int *x, va_list list);:wq 
  * get_precision - Calculates the precision for printing
  * @format: Format in which to print the arguments
  * @i: List of arguments to be  printed.
