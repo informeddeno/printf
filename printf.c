@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <strings.h>
 #include <stdarg.h>
 
 void print_buffer(char buffer[], int *buff_ind);
@@ -15,7 +16,7 @@ void print_buffer(char buffer[], int *buff_ind);
 int _printf(const char *format, ...)
 {
                 int x, printed = 0, printed_chars = 0;
-                int flags, width, precision, size, buff_ind = 0;
+                int flags, size, precision, width, buff_ind = 0;
                 va_list list;
                 char buffer[BUFSIZ];
 
@@ -29,7 +30,7 @@ int _printf(const char *format, ...)
                                 if (format[x] != '%')
                                 {
                                                 buffer[buff_ind++] = format[x];
-                                                if (buff_ind == BUFSIZ)
+                                               if (buff_ind == BUFSIZ)
                                                                 print_buffer(buffer, &buff_ind);
 
                                                 printed_chars++;
